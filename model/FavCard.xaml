@@ -16,9 +16,10 @@
               HorizontalAlignment="Left"
               VerticalShift="50"
                 Height="200" Width="400">
+            
             <Image x:Name="background" Source="ms-appx:///Resource/background/Sun-m.jpg" Stretch="UniformToFill" Opacity="0.8"/>
         </ParallaxView>
-        <Grid Background="#33000000" PointerPressed="Grid_PointerPressed" Height="200" Width="400" >
+        <Grid Background="#33000000"  Height="200" Width="400" >
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" x:Name="location" Foreground="White" FocusVisualPrimaryBrush="White" Margin="20,16,0,0" FontFamily="Microsoft YaHei UI" />
             <TextBlock FocusVisualPrimaryBrush="White" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,54,0,0" FontSize="56" x:Name="tmp"  FontFamily="Microsoft YaHei UI" />
             <TextBlock HorizontalAlignment="Left" Margin="20,138,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="White" FocusVisualPrimaryBrush="White" x:Name="des" FontFamily="Microsoft YaHei UI"/>
@@ -31,6 +32,14 @@
             <Image HorizontalAlignment="Left" Height="16" Margin="233,100,0,0" VerticalAlignment="Top" Width="16" Source="/Resource/WeatherIcon/other/water.png"/>
             <TextBlock HorizontalAlignment="Left" Margin="260,100,0,0" x:Name="sd" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="White" Foreground="White"/>
         </Grid>
-
+        <Grid>
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#00000000" Click="Button_Click" >
+                <Button.ContextFlyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem Text="删除" Icon="Delete" Click="MenuFlyoutItem_Click" />
+                    </MenuFlyout>
+                </Button.ContextFlyout>
+            </Button>
+        </Grid>
     </Grid>
 </UserControl>

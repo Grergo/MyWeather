@@ -37,9 +37,11 @@ namespace Weather
                 switch (navItemTag)
                 {
                     case "Forecast":
+                        ContentFrame.CacheSize = 2;
                         ContentFrame.Navigate(typeof(Forecast), null, new EntranceNavigationTransitionInfo());
                         break;
                     case "fav":
+                        ContentFrame.CacheSize = 2;
                         ContentFrame.Navigate(typeof(Fav), null, new EntranceNavigationTransitionInfo());
                         break;
                 }

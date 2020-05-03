@@ -334,6 +334,7 @@ namespace Weather.Views
             Windows.Storage.ApplicationDataCompositeValue weatherlist= MainPage.localSettings.Values["favlocation"] as ApplicationDataCompositeValue;
             weatherlist[weatherlist.Count.ToString()] = location;
             MainPage.localSettings.Values["favlocation"] = weatherlist;
+            MainPage.Current.ContentFrame.CacheSize = 0;
         }
 
         private void Start_Click(object sender, RoutedEventArgs e)

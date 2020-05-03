@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Weather.Views;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,6 +22,7 @@ namespace Weather.model
 {
     public sealed partial class FavCard : UserControl
     {
+        private string loca;
         public FavCard(Function.Weather weather)
         {
             this.InitializeComponent();
@@ -30,11 +32,46 @@ namespace Weather.model
             fs.Text = weather.HeWeather6[0].now.wind_spd + "公里/小时";
             fx.Rotation= Convert.ToDouble(weather.HeWeather6[0].now.wind_deg) + 90;
             sd.Text = weather.HeWeather6[0].now.hum + "%";
+            loca = weather.HeWeather6[0].basic.location;
 
         }
 
-        private void Grid_PointerPressed(object sender, PointerRoutedEventArgs e)
+        private void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)
         {
+            if(loca== MainPage.localSettings.Values["startLocation"].ToString())
+            {
+                MainPage.localSettings.Values["startLocation"] ="auto_ip";
+                Forecast.location = "auto_ip";
+            }
+            else
+            {
+                Windows.Storage.ApplicationDataCompositeValue weatherlist = MainPage.localSettings.Values["favlocation"] as ApplicationDataCompositeValue;
+                Windows.Storage.ApplicationDataCompositeValue Weather_new = new Windows.Storage.ApplicationDataCompositeValue();
+                int j = 0;
+                for (int i = 0; i < weatherlist.Count; i++)
+                {
+                    if (weatherlist[i.ToString()].ToString() != loca)
+                    {
+                        Weather_new[j.ToString()] = weatherlist[i.ToString()];
+                        j++;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                MainPage.localSettings.Values["favlocation"] = Weather_new;
+                
+            }
+            MainPage.Current.ContentFrame.CacheSize = 0;
+            MainPage.Current.ContentFrame.Navigate(typeof(Fav), null, new EntranceNavigationTransitionInfo());
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Forecast.location = loca;
+            MainPage.Current.ContentFrame.CacheSize = 0;
             MainPage.Current.ContentFrame.Navigate(typeof(Forecast), null, new DrillInNavigationTransitionInfo());
             MainPage.Current.WeatherMainView.SelectedItem = MainPage.Current.WeatherMainView.MenuItems[0];
         }
