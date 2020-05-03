@@ -1,0 +1,42 @@
+﻿<Page
+    x:Class="Weather.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Weather"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:muxm="using:Microsoft.UI.Xaml.Media"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+    >
+    <Page.Resources>
+        <ResourceDictionary>
+            <muxm:AcrylicBrush x:Key="MyAcrylicBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity=".6"/>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid Background="{StaticResource CMapUwpAcrylicBrush}">
+        <controls:NavigationView x:Name="WeatherMainView" ItemInvoked="WeatherMainView_ItemInvoked" IsBackButtonVisible="Collapsed" Background="{StaticResource CMapUwpAcrylicBrush}" OpenPaneLength="150" PaneDisplayMode="LeftCompact" IsPaneOpen="False" x:FieldModifier="Public" >
+            <controls:NavigationView.Transitions>
+                <TransitionCollection>
+                    <NavigationThemeTransition/>
+                </TransitionCollection>
+            </controls:NavigationView.Transitions>
+            <controls:NavigationView.MenuItems>
+                <controls:NavigationViewItem Icon="Home" Content="预报" x:Name="Forecast" Tag="Forecast"/>
+                <controls:NavigationViewItem   Content="收藏夹" x:Name="fav" Tag="fav">
+                    <controls:NavigationViewItem.Icon>
+                        <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE734;"/>
+                    </controls:NavigationViewItem.Icon>
+                </controls:NavigationViewItem>
+            </controls:NavigationView.MenuItems>
+            <Frame x:Name="ContentFrame" x:FieldModifier="Public" >
+                <Frame.ContentTransitions>
+                    <TransitionCollection>
+                        <NavigationThemeTransition/>
+                    </TransitionCollection>
+                </Frame.ContentTransitions>
+            </Frame>
+        </controls:NavigationView>
+    </Grid>
+</Page>

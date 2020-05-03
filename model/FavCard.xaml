@@ -1,0 +1,36 @@
+﻿<UserControl
+    x:Class="Weather.model.FavCard"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Weather.model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="200"
+    d:DesignWidth="400">
+
+    <Grid Height="200" Width="400">
+        <ParallaxView x:Name="parallaxView"
+              Source="{Binding ElementName=ScrollViewer}"
+              VerticalAlignment="Top"
+              HorizontalAlignment="Left"
+              VerticalShift="50"
+                Height="200" Width="400">
+            <Image x:Name="background" Source="ms-appx:///Resource/background/Sun-m.jpg" Stretch="UniformToFill" Opacity="0.8"/>
+        </ParallaxView>
+        <Grid Background="#33000000" PointerPressed="Grid_PointerPressed" Height="200" Width="400" >
+            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" x:Name="location" Foreground="White" FocusVisualPrimaryBrush="White" Margin="20,16,0,0" FontFamily="Microsoft YaHei UI" />
+            <TextBlock FocusVisualPrimaryBrush="White" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,54,0,0" FontSize="56" x:Name="tmp"  FontFamily="Microsoft YaHei UI" />
+            <TextBlock HorizontalAlignment="Left" Margin="20,138,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Foreground="White" FocusVisualPrimaryBrush="White" x:Name="des" FontFamily="Microsoft YaHei UI"/>
+            <TextBlock HorizontalAlignment="Left" Margin="260,65,0,0" x:Name="fs" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="White" Foreground="White" FontSize="16"/>
+            <Image HorizontalAlignment="Left" Height="16" Margin="233,70,0,0" VerticalAlignment="Top" Width="16" Source="/Resource/WeatherIcon/other/F.png" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" >
+                <Image.RenderTransform>
+                    <CompositeTransform x:Name="fx" Rotation="-90"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image HorizontalAlignment="Left" Height="16" Margin="233,100,0,0" VerticalAlignment="Top" Width="16" Source="/Resource/WeatherIcon/other/water.png"/>
+            <TextBlock HorizontalAlignment="Left" Margin="260,100,0,0" x:Name="sd" TextWrapping="Wrap" VerticalAlignment="Top" FocusVisualPrimaryBrush="White" Foreground="White"/>
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{67A47016-224D-4914-8D82-B8A6D75F4C86}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weather</RootNamespace>
+    <AssemblyName>Weather</AssemblyName>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17763.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>C:\Users\Georg\Desktop\</AppxPackageDir>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Auto</AppxBundle>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <PackageCertificateKeyFile>Weather_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Function\HTTP.cs" />
+    <Compile Include="Function\Weather.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="model\FavCard.xaml.cs">
+      <DependentUpon>FavCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="model\WeatherCard.xaml.cs">
+      <DependentUpon>WeatherCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Fav.xaml.cs">
+      <DependentUpon>Fav.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forecast.xaml.cs">
+      <DependentUpon>Forecast.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Setting.xaml.cs">
+      <DependentUpon>Setting.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Resource\background\Sun-e.jpg" />
+    <Content Include="Resource\background\Sun-m.jpg" />
+    <Content Include="Resource\WeatherIcon\128\100.png" />
+    <Content Include="Resource\WeatherIcon\128\101.png" />
+    <Content Include="Resource\WeatherIcon\128\102.png" />
+    <Content Include="Resource\WeatherIcon\128\103.png" />
+    <Content Include="Resource\WeatherIcon\128\104.png" />
+    <Content Include="Resource\WeatherIcon\128\150.png" />
+    <Content Include="Resource\WeatherIcon\128\153.png" />
+    <Content Include="Resource\WeatherIcon\128\154.png" />
+    <Content Include="Resource\WeatherIcon\128\300.png" />
+    <Content Include="Resource\WeatherIcon\128\301.png" />
+    <Content Include="Resource\WeatherIcon\128\302.png" />
+    <Content Include="Resource\WeatherIcon\128\303.png" />
+    <Content Include="Resource\WeatherIcon\128\304.png" />
+    <Content Include="Resource\WeatherIcon\128\305.png" />
+    <Content Include="Resource\WeatherIcon\128\306.png" />
+    <Content Include="Resource\WeatherIcon\128\307.png" />
+    <Content Include="Resource\WeatherIcon\128\308.png" />
+    <Content Include="Resource\WeatherIcon\128\309.png" />
+    <Content Include="Resource\WeatherIcon\128\310.png" />
+    <Content Include="Resource\WeatherIcon\128\311.png" />
+    <Content Include="Resource\WeatherIcon\128\312.png" />
+    <Content Include="Resource\WeatherIcon\128\313.png" />
+    <Content Include="Resource\WeatherIcon\128\314.png" />
+    <Content Include="Resource\WeatherIcon\128\315.png" />
+    <Content Include="Resource\WeatherIcon\128\316.png" />
+    <Content Include="Resource\WeatherIcon\128\317.png" />
+    <Content Include="Resource\WeatherIcon\128\318.png" />
+    <Content Include="Resource\WeatherIcon\128\350.png" />
+    <Content Include="Resource\WeatherIcon\128\351.png" />
+    <Content Include="Resource\WeatherIcon\128\399.png" />
+    <Content Include="Resource\WeatherIcon\128\400.png" />
+    <Content Include="Resource\WeatherIcon\128\401.png" />
+    <Content Include="Resource\WeatherIcon\128\402.png" />
+    <Content Include="Resource\WeatherIcon\128\403.png" />
+    <Content Include="Resource\WeatherIcon\128\404.png" />
+    <Content Include="Resource\WeatherIcon\128\405.png" />
+    <Content Include="Resource\WeatherIcon\128\406.png" />
+    <Content Include="Resource\WeatherIcon\128\407.png" />
+    <Content Include="Resource\WeatherIcon\128\408.png" />
+    <Content Include="Resource\WeatherIcon\128\409.png" />
+    <Content Include="Resource\WeatherIcon\128\410.png" />
+    <Content Include="Resource\WeatherIcon\128\456.png" />
+    <Content Include="Resource\WeatherIcon\128\457.png" />
+    <Content Include="Resource\WeatherIcon\128\499.png" />
+    <Content Include="Resource\WeatherIcon\128\500.png" />
+    <Content Include="Resource\WeatherIcon\128\501.png" />
+    <Content Include="Resource\WeatherIcon\128\502.png" />
+    <Content Include="Resource\WeatherIcon\128\503.png" />
+    <Content Include="Resource\WeatherIcon\128\504.png" />
+    <Content Include="Resource\WeatherIcon\128\507.png" />
+    <Content Include="Resource\WeatherIcon\128\508.png" />
+    <Content Include="Resource\WeatherIcon\128\509.png" />
+    <Content Include="Resource\WeatherIcon\128\510.png" />
+    <Content Include="Resource\WeatherIcon\128\511.png" />
+    <Content Include="Resource\WeatherIcon\128\512.png" />
+    <Content Include="Resource\WeatherIcon\128\513.png" />
+    <Content Include="Resource\WeatherIcon\128\514.png" />
+    <Content Include="Resource\WeatherIcon\128\515.png" />
+    <Content Include="Resource\WeatherIcon\128\900.png" />
+    <Content Include="Resource\WeatherIcon\128\901.png" />
+    <Content Include="Resource\WeatherIcon\128\999.png" />
+    <Content Include="Resource\WeatherIcon\256\100.png" />
+    <Content Include="Resource\WeatherIcon\256\101.png" />
+    <Content Include="Resource\WeatherIcon\256\102.png" />
+    <Content Include="Resource\WeatherIcon\256\103.png" />
+    <Content Include="Resource\WeatherIcon\256\104.png" />
+    <Content Include="Resource\WeatherIcon\256\150.png" />
+    <Content Include="Resource\WeatherIcon\256\153.png" />
+    <Content Include="Resource\WeatherIcon\256\154.png" />
+    <Content Include="Resource\WeatherIcon\256\300.png" />
+    <Content Include="Resource\WeatherIcon\256\301.png" />
+    <Content Include="Resource\WeatherIcon\256\302.png" />
+    <Content Include="Resource\WeatherIcon\256\303.png" />
+    <Content Include="Resource\WeatherIcon\256\304.png" />
+    <Content Include="Resource\WeatherIcon\256\305.png" />
+    <Content Include="Resource\WeatherIcon\256\306.png" />
+    <Content Include="Resource\WeatherIcon\256\307.png" />
+    <Content Include="Resource\WeatherIcon\256\308.png" />
+    <Content Include="Resource\WeatherIcon\256\309.png" />
+    <Content Include="Resource\WeatherIcon\256\310.png" />
+    <Content Include="Resource\WeatherIcon\256\311.png" />
+    <Content Include="Resource\WeatherIcon\256\312.png" />
+    <Content Include="Resource\WeatherIcon\256\313.png" />
+    <Content Include="Resource\WeatherIcon\256\314.png" />
+    <Content Include="Resource\WeatherIcon\256\315.png" />
+    <Content Include="Resource\WeatherIcon\256\316.png" />
+    <Content Include="Resource\WeatherIcon\256\317.png" />
+    <Content Include="Resource\WeatherIcon\256\318.png" />
+    <Content Include="Resource\WeatherIcon\256\350.png" />
+    <Content Include="Resource\WeatherIcon\256\351.png" />
+    <Content Include="Resource\WeatherIcon\256\399.png" />
+    <Content Include="Resource\WeatherIcon\256\400.png" />
+    <Content Include="Resource\WeatherIcon\256\401.png" />
+    <Content Include="Resource\WeatherIcon\256\402.png" />
+    <Content Include="Resource\WeatherIcon\256\403.png" />
+    <Content Include="Resource\WeatherIcon\256\404.png" />
+    <Content Include="Resource\WeatherIcon\256\405.png" />
+    <Content Include="Resource\WeatherIcon\256\406.png" />
+    <Content Include="Resource\WeatherIcon\256\407.png" />
+    <Content Include="Resource\WeatherIcon\256\408.png" />
+    <Content Include="Resource\WeatherIcon\256\409.png" />
+    <Content Include="Resource\WeatherIcon\256\410.png" />
+    <Content Include="Resource\WeatherIcon\256\456.png" />
+    <Content Include="Resource\WeatherIcon\256\457.png" />
+    <Content Include="Resource\WeatherIcon\256\499.png" />
+    <Content Include="Resource\WeatherIcon\256\500.png" />
+    <Content Include="Resource\WeatherIcon\256\501.png" />
+    <Content Include="Resource\WeatherIcon\256\502.png" />
+    <Content Include="Resource\WeatherIcon\256\503.png" />
+    <Content Include="Resource\WeatherIcon\256\504.png" />
+    <Content Include="Resource\WeatherIcon\256\507.png" />
+    <Content Include="Resource\WeatherIcon\256\508.png" />
+    <Content Include="Resource\WeatherIcon\256\509.png" />
+    <Content Include="Resource\WeatherIcon\256\510.png" />
+    <Content Include="Resource\WeatherIcon\256\511.png" />
+    <Content Include="Resource\WeatherIcon\256\512.png" />
+    <Content Include="Resource\WeatherIcon\256\513.png" />
+    <Content Include="Resource\WeatherIcon\256\514.png" />
+    <Content Include="Resource\WeatherIcon\256\515.png" />
+    <Content Include="Resource\WeatherIcon\256\900.png" />
+    <Content Include="Resource\WeatherIcon\256\901.png" />
+    <Content Include="Resource\WeatherIcon\256\999.png" />
+    <Content Include="Resource\WeatherIcon\64\100.png" />
+    <Content Include="Resource\WeatherIcon\64\101.png" />
+    <Content Include="Resource\WeatherIcon\64\102.png" />
+    <Content Include="Resource\WeatherIcon\64\103.png" />
+    <Content Include="Resource\WeatherIcon\64\104.png" />
+    <Content Include="Resource\WeatherIcon\64\150.png" />
+    <Content Include="Resource\WeatherIcon\64\153.png" />
+    <Content Include="Resource\WeatherIcon\64\154.png" />
+    <Content Include="Resource\WeatherIcon\64\300.png" />
+    <Content Include="Resource\WeatherIcon\64\301.png" />
+    <Content Include="Resource\WeatherIcon\64\302.png" />
+    <Content Include="Resource\WeatherIcon\64\303.png" />
+    <Content Include="Resource\WeatherIcon\64\304.png" />
+    <Content Include="Resource\WeatherIcon\64\305.png" />
+    <Content Include="Resource\WeatherIcon\64\306.png" />
+    <Content Include="Resource\WeatherIcon\64\307.png" />
+    <Content Include="Resource\WeatherIcon\64\308.png" />
+    <Content Include="Resource\WeatherIcon\64\309.png" />
+    <Content Include="Resource\WeatherIcon\64\310.png" />
+    <Content Include="Resource\WeatherIcon\64\311.png" />
+    <Content Include="Resource\WeatherIcon\64\312.png" />
+    <Content Include="Resource\WeatherIcon\64\313.png" />
+    <Content Include="Resource\WeatherIcon\64\314.png" />
+    <Content Include="Resource\WeatherIcon\64\315.png" />
+    <Content Include="Resource\WeatherIcon\64\316.png" />
+    <Content Include="Resource\WeatherIcon\64\317.png" />
+    <Content Include="Resource\WeatherIcon\64\318.png" />
+    <Content Include="Resource\WeatherIcon\64\350.png" />
+    <Content Include="Resource\WeatherIcon\64\351.png" />
+    <Content Include="Resource\WeatherIcon\64\399.png" />
+    <Content Include="Resource\WeatherIcon\64\400.png" />
+    <Content Include="Resource\WeatherIcon\64\401.png" />
+    <Content Include="Resource\WeatherIcon\64\402.png" />
+    <Content Include="Resource\WeatherIcon\64\403.png" />
+    <Content Include="Resource\WeatherIcon\64\404.png" />
+    <Content Include="Resource\WeatherIcon\64\405.png" />
+    <Content Include="Resource\WeatherIcon\64\406.png" />
+    <Content Include="Resource\WeatherIcon\64\407.png" />
+    <Content Include="Resource\WeatherIcon\64\408.png" />
+    <Content Include="Resource\WeatherIcon\64\409.png" />
+    <Content Include="Resource\WeatherIcon\64\410.png" />
+    <Content Include="Resource\WeatherIcon\64\456.png" />
+    <Content Include="Resource\WeatherIcon\64\457.png" />
+    <Content Include="Resource\WeatherIcon\64\499.png" />
+    <Content Include="Resource\WeatherIcon\64\500.png" />
+    <Content Include="Resource\WeatherIcon\64\501.png" />
+    <Content Include="Resource\WeatherIcon\64\502.png" />
+    <Content Include="Resource\WeatherIcon\64\503.png" />
+    <Content Include="Resource\WeatherIcon\64\504.png" />
+    <Content Include="Resource\WeatherIcon\64\507.png" />
+    <Content Include="Resource\WeatherIcon\64\508.png" />
+    <Content Include="Resource\WeatherIcon\64\509.png" />
+    <Content Include="Resource\WeatherIcon\64\510.png" />
+    <Content Include="Resource\WeatherIcon\64\511.png" />
+    <Content Include="Resource\WeatherIcon\64\512.png" />
+    <Content Include="Resource\WeatherIcon\64\513.png" />
+    <Content Include="Resource\WeatherIcon\64\514.png" />
+    <Content Include="Resource\WeatherIcon\64\515.png" />
+    <Content Include="Resource\WeatherIcon\64\900.png" />
+    <Content Include="Resource\WeatherIcon\64\901.png" />
+    <Content Include="Resource\WeatherIcon\64\999.png" />
+    <Content Include="Resource\WeatherIcon\other\F.png" />
+    <Content Include="Resource\WeatherIcon\other\M1.png" />
+    <Content Include="Resource\WeatherIcon\other\M2.png" />
+    <Content Include="Resource\WeatherIcon\other\S1.png" />
+    <Content Include="Resource\WeatherIcon\other\S2.png" />
+    <Content Include="Resource\WeatherIcon\other\water.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="model\FavCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="model\WeatherCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Fav.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Forecast.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Setting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LiteDB">
+      <Version>5.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="LiveCharts.Uwp">
+      <Version>0.8.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.9</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.1.190405004.2</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resource\WeatherIcon\128\LICENSE" />
+    <None Include="Resource\WeatherIcon\256\LICENSE" />
+    <None Include="Resource\WeatherIcon\64\LICENSE" />
+    <None Include="Weather_TemporaryKey.pfx" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
