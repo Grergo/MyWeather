@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Weather.Views;
 using Windows.Storage;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
 
@@ -17,6 +18,7 @@ namespace Weather
         public static MainPage Current;
         public static ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         private  string StartLocation="auto_ip";
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -67,6 +69,15 @@ namespace Weather
                 Windows.Storage.ApplicationDataCompositeValue Weather = new Windows.Storage.ApplicationDataCompositeValue();
                 localSettings.Values["favlocation"] = Weather;
             }
+            if (localSettings.Values["rain"] == null)
+            {
+                localSettings.Values["rain"] = "1";
+            }
+            if (localSettings.Values["notice"] == null)
+            {
+                localSettings.Values["notice"] = "1";
+            }
+
             
         }
     }

@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,11 +27,44 @@ namespace Weather
         /// 初始化单一实例应用程序对象。这是执行的创作代码的第一行，
         /// 已执行，逻辑上等同于 main() 或 WinMain()。
         /// </summary>
+        public static ApplicationTheme apptheme;
         public App()
         {
+
+           
+            ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
+            apptheme = this.RequestedTheme;
+            if (localSettings.Values["theme"] == null)
+            {
+                localSettings.Values["theme"] = "light";
+                this.RequestedTheme = ApplicationTheme.Light;
+            }
+            else if (localSettings.Values["theme"].ToString() == "light")
+            {
+                this.RequestedTheme = ApplicationTheme.Light;
+            }
+            else if (localSettings.Values["theme"].ToString() == "night")
+            {
+                this.RequestedTheme = ApplicationTheme.Dark;
+            }
+            if(localSettings.Values["sound"]==null) {
+                localSettings.Values["sound"] = "0";
+            }
+            else if(localSettings.Values["sound"].ToString()=="0")
+            {
+                ElementSoundPlayer.State = ElementSoundPlayerState.Off;
+            }
+            else
+            {
+                ElementSoundPlayer.State = ElementSoundPlayerState.On;
+                ElementSoundPlayer.Volume = 1.0;
+
+            }
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            //ElementSoundPlayer.State = ElementSoundPlayerState.On;
+            
+           
+            
         }
 
         /// <summary>

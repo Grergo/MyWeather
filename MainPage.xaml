@@ -16,7 +16,7 @@
         </ResourceDictionary>
     </Page.Resources>
     <Grid Background="{StaticResource CMapUwpAcrylicBrush}">
-        <controls:NavigationView x:Name="WeatherMainView" ItemInvoked="WeatherMainView_ItemInvoked" IsBackButtonVisible="Collapsed" Background="{StaticResource CMapUwpAcrylicBrush}" OpenPaneLength="150" PaneDisplayMode="LeftCompact" IsPaneOpen="False" x:FieldModifier="Public" >
+        <controls:NavigationView x:Name="WeatherMainView" ItemInvoked="WeatherMainView_ItemInvoked" IsBackButtonVisible="Collapsed" Background="{StaticResource CMapUwpAcrylicBrush}" OpenPaneLength="150" PaneDisplayMode="LeftCompact" IsPaneOpen="False" x:FieldModifier="Public"  >
             <controls:NavigationView.Transitions>
                 <TransitionCollection>
                     <NavigationThemeTransition/>

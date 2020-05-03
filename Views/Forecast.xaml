@@ -8,9 +8,11 @@
     mc:Ignorable="d"
     xmlns:controls="using:Microsoft.UI.Xaml.Controls" 
     xmlns:lvc="using:LiveCharts.Uwp"
-    xmlns:model="using:Weather.model"
+    xmlns:model="using:Weather.model" 
+    xmlns:local1="using:Weather"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    NavigationCacheMode="Enabled">
+    NavigationCacheMode="Enabled"
+    >
     <Page.Resources>
         <Style x:Key="ButtonStyle1" TargetType="Button">
             <Setter Property="Background" Value="{ThemeResource ButtonBackground}"/>

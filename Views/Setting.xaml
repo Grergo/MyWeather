@@ -4,11 +4,17 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Weather.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local1="using:Weather"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    >
 
     <Grid Background="{StaticResource CMapUwpAcrylicBrush}">
-        <TextBlock>Page3</TextBlock>
+        <ToggleSwitch x:Name="theme" Header="是否开启黑暗模式（需要重新启动程序）" Margin="156,151,0,0" VerticalAlignment="Top" Toggled="theme_Toggled" FontSize="20" FontFamily="Microsoft YaHei UI" Height="65"/>
+        <ToggleSwitch x:Name="sounds" Header="是否开启声音" Margin="156,240,0,0" VerticalAlignment="Top" Toggled="sounds_Toggled" FontSize="20" FontFamily="Microsoft YaHei UI" Height="65"/>
+        <TextBlock HorizontalAlignment="Left" Margin="156,80,0,0" Text="常规设置" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="156,0,0,0" Text="通知设置" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="36"/>
+        <ToggleSwitch x:Name="Rain" Header="是否开启降雨提醒" Margin="156,420,0,0" VerticalAlignment="Top" Toggled="Rain_Toggled" FontSize="20" FontFamily="Microsoft YaHei UI" Height="65"/>
+        <ToggleSwitch x:Name="notice" Header="是否开启预报通知" Margin="150,515,0,0" VerticalAlignment="Top" Toggled="notice_Toggled" FontSize="20" FontFamily="Microsoft YaHei UI" Height="65"/>
     </Grid>
 </Page>
