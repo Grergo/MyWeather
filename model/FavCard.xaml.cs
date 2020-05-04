@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 //https://go.microsoft.com/fwlink/?LinkId=234236 上介绍了“用户控件”项模板
@@ -26,6 +27,7 @@ namespace Weather.model
         public FavCard(Function.Weather weather)
         {
             this.InitializeComponent();
+            Loadbackground(weather);
             location.Text=weather.HeWeather6[0].basic.cnty.Replace("中国", "中华人民共和国") + weather.HeWeather6[0].basic.location;
             tmp.Text = weather.HeWeather6[0].now.tmp + "℃";
             des.Text = weather.HeWeather6[0].now.cond_txt;
@@ -74,6 +76,67 @@ namespace Weather.model
             MainPage.Current.ContentFrame.CacheSize = 0;
             MainPage.Current.ContentFrame.Navigate(typeof(Forecast), null, new DrillInNavigationTransitionInfo());
             MainPage.Current.WeatherMainView.SelectedItem = MainPage.Current.WeatherMainView.MenuItems[0];
+        }
+        private void Loadbackground(Function.Weather weather)
+        {
+            TimeSpan span3 = DateTime.Parse("19:30").TimeOfDay;
+            TimeSpan span2 = DateTime.Parse("14:30").TimeOfDay;
+            TimeSpan span1 = DateTime.Parse("06:00").TimeOfDay;
+            if (DateTime.Now.TimeOfDay >= span1 && DateTime.Now.TimeOfDay <= span2)
+            {
+                if (weather.HeWeather6[0].now.cond_txt.Contains("雨"))
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/201.jpg"));
+                    background.Source = i;
+                }
+                else if (weather.HeWeather6[0].now.cond_txt.Contains("雪"))
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/301.jpg"));
+                    background.Source = i;
+                }
+                else
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/101.jpg"));
+                    background.Source = i;
+                }
+
+            }
+            else if (DateTime.Now.TimeOfDay >= span2 && DateTime.Now.TimeOfDay <= span3)
+            {
+                if (weather.HeWeather6[0].now.cond_txt.Contains("雨"))
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/202.jpg"));
+                    background.Source = i;
+                }
+                else if (weather.HeWeather6[0].now.cond_txt.Contains("雪"))
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/302.jpg"));
+                    background.Source = i;
+                }
+                else
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/102.jpg"));
+                    background.Source = i;
+                }
+            }
+            else if (DateTime.Now.TimeOfDay >= span3 || DateTime.Now.TimeOfDay <= span1)
+            {
+                if (weather.HeWeather6[0].now.cond_txt.Contains("雨"))
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/203.jpg"));
+                    background.Source = i;
+                }
+                else if (weather.HeWeather6[0].now.cond_txt.Contains("雪"))
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/303.jpg"));
+                    background.Source = i;
+                }
+                else
+                {
+                    BitmapImage i = new BitmapImage(new Uri("ms-appx:///Resource/background/103.jpg"));
+                    background.Source = i;
+                }
+            }
         }
     }
 }

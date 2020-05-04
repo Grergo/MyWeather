@@ -17,7 +17,7 @@
               VerticalShift="50"
                 Height="200" Width="400">
             
-            <Image x:Name="background" Source="ms-appx:///Resource/background/Sun-m.jpg" Stretch="UniformToFill" Opacity="0.8"/>
+            <Image x:Name="background"  Stretch="UniformToFill" Opacity="0.8"/>
         </ParallaxView>
         <Grid Background="#33000000"  Height="200" Width="400" >
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" x:Name="location" Foreground="White" FocusVisualPrimaryBrush="White" Margin="20,16,0,0" FontFamily="Microsoft YaHei UI" />

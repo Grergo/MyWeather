@@ -15,8 +15,8 @@
             <muxm:AcrylicBrush x:Key="MyAcrylicBrush" BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeLowColor}" TintOpacity=".6"/>
         </ResourceDictionary>
     </Page.Resources>
-    <Grid Background="{StaticResource CMapUwpAcrylicBrush}">
-        <controls:NavigationView x:Name="WeatherMainView" ItemInvoked="WeatherMainView_ItemInvoked" IsBackButtonVisible="Collapsed" Background="{StaticResource CMapUwpAcrylicBrush}" OpenPaneLength="150" PaneDisplayMode="LeftCompact" IsPaneOpen="False" x:FieldModifier="Public"  >
+    <Grid>
+        <controls:NavigationView x:Name="WeatherMainView" ItemInvoked="WeatherMainView_ItemInvoked" IsBackButtonVisible="Collapsed"  OpenPaneLength="150" PaneDisplayMode="LeftCompact" IsPaneOpen="False" x:FieldModifier="Public" Background="{StaticResource CMapUwpAcrylicBrush}">
             <controls:NavigationView.Transitions>
                 <TransitionCollection>
                     <NavigationThemeTransition/>

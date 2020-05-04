@@ -102,7 +102,7 @@
               VerticalAlignment="Top"
               HorizontalAlignment="Left"
               VerticalShift="50">
-            <Image x:Name="background" Source="ms-appx:///Resource/background/Sun-m.jpg" Stretch="Fill" Opacity="0.8"/>
+            <Image x:Name="background"  Stretch="Fill" Opacity="0.8"/>
         </ParallaxView>
         <StackPanel>
             <Grid Height="45" Background="#66020202" >

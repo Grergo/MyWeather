@@ -20,8 +20,17 @@
                     <muxm:AcrylicBrush x:Key="CMapUwpAcrylicBrush"
                           BackgroundSource="HostBackdrop"
                           TintColor="White"
-                          TintOpacity="0.1"
-                          FallbackColor="{StaticResource SystemAccentColor}"/>
+                          TintOpacity="0.2"
+                          FallbackColor="White"/>
+                    <muxm:AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+                                   BackgroundSource="Backdrop"
+                                   TintColor="White"
+                                   TintOpacity=".2"/>
+                    <LinearGradientBrush x:Key="NavigationViewExpandedPaneBackground"
+                                     StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="LightSlateGray" Offset="0.0" />
+                        <GradientStop Color="White" Offset="1.0" />
+                    </LinearGradientBrush>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="HighContrast">
                     <SolidColorBrush x:Key="CMapUwpAcrylicBrush"
@@ -31,15 +40,33 @@
                     <muxm:AcrylicBrush x:Key="CMapUwpAcrylicBrush"
                           BackgroundSource="HostBackdrop"
                           TintColor="White"
-                          TintOpacity="0.1"
-                          FallbackColor="{StaticResource SystemAccentColor}"/>
+                          TintOpacity="0.2"
+                          FallbackColor="White"/>
+                    <muxm:AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+                                   BackgroundSource="Backdrop"
+                                   TintColor="White"
+                                   TintOpacity=".2"/>
+                    <LinearGradientBrush x:Key="NavigationViewExpandedPaneBackground"
+                                     StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="LightSlateGray" Offset="0.0" />
+                        <GradientStop Color="White" Offset="1.0" />
+                    </LinearGradientBrush>
                 </ResourceDictionary>
                 <ResourceDictionary x:Key="Dark">
                     <muxm:AcrylicBrush x:Key="CMapUwpAcrylicBrush"
                           BackgroundSource="HostBackdrop"
                           TintColor="Black"
                           TintOpacity="0.4"
-                          FallbackColor="{StaticResource SystemAccentColor}"/>
+                          FallbackColor="White"/>
+                    <muxm:AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+                                   BackgroundSource="Backdrop"
+                                   TintColor="Black"
+                                   TintOpacity=".4"/>
+                    <LinearGradientBrush x:Key="NavigationViewExpandedPaneBackground"
+                                     StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="Black" Offset="0.0" />
+                        <GradientStop Color="Black" Offset="1.0" />
+                    </LinearGradientBrush>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
         </ResourceDictionary>

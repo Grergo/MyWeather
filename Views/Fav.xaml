@@ -15,7 +15,7 @@
         <ScrollViewer >
             <Grid>
                 <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,50,0,0" FontSize="36" FontFamily="Microsoft YaHei UI">启动位置</TextBlock>
-                <GridView x:Name="container1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="400" Height="200" Margin="-600,130,0,0" ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
+                <GridView x:Name="container1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" Height="200" Margin="50,130,0,0" ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.VerticalScrollMode="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" />
                 <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,350,0,0" FontSize="36" FontFamily="Microsoft YaHei UI">收藏的位置</TextBlock>
                 <GridView HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="auto" Margin="50,420,50,50" x:Name="container2" >
                     <GridView.ItemContainerStyle>
