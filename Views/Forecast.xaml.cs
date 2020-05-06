@@ -28,7 +28,7 @@ namespace Weather.Views
     public sealed partial class Forecast : Page
     {
         private ObservableCollection<String> suggestions;
-        private string key = "bb44f1efcb554198bcf14ef08f3bcd51";
+        private string key = "bb44f1efcb554cf14ef08f3bcd51";
        // private ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
         private List<string> Labels { get; set; }
         public static string location { get; set; }
@@ -37,10 +37,19 @@ namespace Weather.Views
         {
             this.InitializeComponent();
             suggestions = new ObservableCollection<string>();
-            loadWeather(location);
-            load_Dalily(location);
-            ShowChart(location);
-            load_des(location);
+            try
+            {
+                loadWeather(location);
+                load_Dalily(location);
+                ShowChart(location);
+                load_des(location);
+            }
+            catch
+            {
+                return;
+            }
+        
+            
 
         }
 
@@ -345,6 +354,10 @@ namespace Weather.Views
         {
             
             MainPage.localSettings.Values["startLocation"] = location;
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic.Add("noticeurl", MainPage.localSettings.Values["noticeurl"].ToString());
+            dic.Add("location", location);
+            Function.HTTP.Post("http://192.168.5.2/UWP/INFO", dic);
         }
         private void Loadbackground(Function.Weather weather)
         {

@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="18fcca79-f98a-480b-aa5f-91bd3dc420c1"
-    Publisher="CN=Georg"
-    Version="1.0.1.0" />
+    Name="1249OdinMX.OdinWeather"
+    Publisher="CN=21DAC9FE-F6AD-4AFC-BCD7-CE9F8D3B84D9"
+    Version="1.0.6.0" />
 
-  <mp:PhoneIdentity PhoneProductId="18fcca79-f98a-480b-aa5f-91bd3dc420c1" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="81ee3054-8fa7-4237-8c0e-3440408ed059" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Weather</DisplayName>
-    <PublisherDisplayName>Georg</PublisherDisplayName>
+    <DisplayName>OdinWeather</DisplayName>
+    <PublisherDisplayName>OdinMX</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,7 +32,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="Weather.App">
       <uap:VisualElements
-        DisplayName="Weather"
+        DisplayName="我的天气"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Weather"
@@ -56,6 +56,5 @@
   <Capabilities>
     <Capability Name="internetClient" />
     <Capability Name="privateNetworkClientServer"/>
-    <Capability Name="internetClientServer"/>
   </Capabilities>
 </Package>

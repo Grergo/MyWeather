@@ -14,7 +14,7 @@ namespace Weather.Views
     /// </summary>
     public sealed partial class Fav : Page
     {
-        private string key = "bb44f1efcb554198bcf14ef08f3bcd51";
+        private string key = "bb44f1efcb554cf14ef08f3bcd51";
         public Fav()
         {
             this.InitializeComponent();
